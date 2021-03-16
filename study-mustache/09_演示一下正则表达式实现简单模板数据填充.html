@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var templateStr = '<h1>我买了一个{{thing}}，花了{{money}}元，好{{mood}}</h1>';
+
+    var data = {
+        thing: '白菜',
+        money: 5,
+        mood: '激动'
+    };
+
+    function render(templateStr, data) {
+        return templateStr.replace(/\{\{(\w+)\}\}/g, function (match, $1) {
+            console.log(match, $1)
+            return data[$1];
+        })
+    }
+
+    var result = render(templateStr, data)
+    console.log(result)
+</script>
+</body>
+</html>

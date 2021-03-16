@@ -12,5 +12,6 @@ var obj = {
 };
 
 observe(obj);
-// console.log(obj.a.m)
+console.log(obj.g)
 obj.g.push(66)
+console.log(obj.g)
