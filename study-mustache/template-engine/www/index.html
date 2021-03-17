@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <script src="/xuni/bundle.js"></script>
+    <script>
+        // 模板字符串
+        var templateStr = `
+            <div>
+                <ul>
+                    {{#students}}
+                    <li class="myli">
+                        学生{{name}}的爱好是
+                        <ol>
+                            {{#hobbies}}
+                            <li>{{.}}</li>
+                            {{/hobbies}}
+                        </ol>
+                    </li>
+                    {{/students}}
+                </ul>
+            </div>
+        `;
+        // 数据
+        var data = {
+
+        }
+
+        TemplateEngine.render(templateStr, data);
+    </script>
+</body>
+</html>
